@@ -45,8 +45,8 @@ class Player:
             self.draw_card(deck)
         return self
 
-    def display_option(self, discard_pile, deck, player):
-        print("*" * 50 + f"\n\nPlayer Turn: {player}\n\n")
+    def display_option(self, discard_pile, deck, name):
+        print("*" * 50 + f"\n\nPlayer Turn: {name}\n\n")
         print(f"Discard Pile: {discard_pile}\n\nCurrent hand:")
         self.show_hand()
         selection = input(
@@ -55,12 +55,12 @@ class Player:
 
         if selection == "1":
             self.draw_card(deck)
-            return self.display_option(discard_pile, deck, player)
+            return self.display_option(discard_pile, deck, name)
         elif selection == "2":
             return self.play_card(discard_pile)
         else:
             print("\n\n*****Invalid action: try again*****\n\n")
-            self.display_option(discard_pile, deck, player)
+            self.display_option(discard_pile, deck, name)
 
         return self
 
