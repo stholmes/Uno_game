@@ -1,6 +1,6 @@
 from os import system, name
 from time import sleep
-from classes_copy import Card, Deck, Player
+from classes import Card, Deck, Player
 from random import shuffle
 
 #clear screen function
