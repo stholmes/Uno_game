@@ -1,6 +1,6 @@
 from os import system, name
 from time import sleep
-from classes import Card, Deck, Player
+from classes_copy import Card, Deck, Player
 from random import shuffle
 
 #clear screen function
@@ -75,7 +75,7 @@ while game_continue:
     for player in players:
         # print(f"Pile is: {pile}")
         # player turn logic
-        pile = player.display_option(discard_pile=pile, deck=deck, name=player.name)
+        pile = player.display_option(discard_pile=pile, deck=deck)
         
         # end of turn logic / conditions
         if len(player.hand) == 1:
